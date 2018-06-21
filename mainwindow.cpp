@@ -7,7 +7,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     player = new QMediaPlayer(this);
+    timer = new QTimer(this);
+    ui->saTitle->setWidget(ui->lTitle);
     connectSlots();
+
 }
 
 MainWindow::~MainWindow()
@@ -71,6 +74,7 @@ void MainWindow::connectSlots()
     connect(player,&QMediaPlayer::durationChanged,this,&MainWindow::on_Duration_change);
     connect(ui->bExit,&QPushButton::clicked,this,&MainWindow::close);
     connect(ui->bMin,&QPushButton::clicked,this,&MainWindow::showMinimized);
+    connect(timer,&QTimer::timeout,this,&MainWindow::on_Timer_timeout);
 }
 
 void MainWindow::changeVolIco()
@@ -100,4 +104,14 @@ void MainWindow::on_bMute_clicked()
         ui->sVolume->setValue(pVol);
         changeVolIco();
     }
+}
+
+void MainWindow::on_Timer_timeout()
+{
+    timer->start(5000);
+}
+
+void MainWindow::on_Timer_isActive()
+{
+
 }

@@ -404,10 +404,26 @@ background-repeat:none;</string>
       <x>11</x>
       <y>51</y>
       <width>281</width>
-      <height>35</height>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="2" colspan="4">
+      <widget class="QLabel" name="lTitle">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:invisible;</string>
+       </property>
+       <property name="text">
+        <string>Tu będzie tytuł</string>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0" alignment="Qt::AlignLeft">
       <widget class="QPushButton" name="bOpenFile">
        <property name="minimumSize">
@@ -437,20 +453,33 @@ background-repeat:none;</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1" colspan="4">
-      <widget class="QLabel" name="lTitle">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
+     <item row="0" column="1">
+      <widget class="QScrollArea" name="saTitle">
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>30</height>
+        </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">background:none;</string>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
        </property>
-       <property name="text">
-        <string>Tu będzie tytuł</string>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
        </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>166</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </item>
     </layout>

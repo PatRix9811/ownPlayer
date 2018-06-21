@@ -5,6 +5,7 @@
 #include <QMediaPlayer>
 #include <QFileDialog>
 #include <QDialog>
+#include <QTimer>
 
 namespace Ui {
 class MainWindow;
@@ -35,10 +36,15 @@ private slots:
 
     void on_bMute_clicked();
 
+    void on_Timer_timeout();
+
+    void on_Timer_isActive();
+
 private:
     Ui::MainWindow *ui;
     QMediaPlayer* player;
     QFileDialog* file;
+    QTimer* timer;
     int pVol;
 
     void connectSlots();
