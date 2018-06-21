@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>IMG/open1.png</file>
+        <file>IMG/open2.png</file>
+        <file>IMG/pause_blue.png</file>
+        <file>IMG/pause_default.png</file>
+        <file>IMG/pause_red.png</file>
+        <file>IMG/play_blue.png</file>
+        <file>IMG/play_default.png</file>
+        <file>IMG/play_red.png</file>
+        <file>IMG/volMax.png</file>
+        <file>IMG/volMid.png</file>
+        <file>IMG/volMuted.png</file>
+        <file>IMG/bg.png</file>
+    </qresource>
+</RCC>
